@@ -1,0 +1,233 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"><title>night-emotion-radio｜公众号情绪文章馆｜完整文章修复版</title><style>
+:root{
+  --bg:#090815;
+  --bg2:#121126;
+  --panel:rgba(255,255,255,.085);
+  --panel-strong:rgba(255,255,255,.13);
+  --text:#fff7f2;
+  --text-dark:#241c1c;
+  --muted:#c9bdca;
+  --muted-dark:#8b7b84;
+  --line:rgba(255,255,255,.14);
+  --pink:#ff6b9d;
+  --orange:#ff9d5c;
+  --purple:#8a6cff;
+  --wine:#8f2d56;
+  --cyan:#6de6ff;
+  --gold:#ffd08a;
+  --cream:#fff8f1;
+  --ink:#151221;
+  --shadow:0 24px 70px rgba(0,0,0,.32);
+  --soft-shadow:0 14px 38px rgba(17,10,24,.22);
+  --radius:26px;
+  --safe-bottom:96px;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Segoe UI",sans-serif;
+  color:var(--text);
+  background:
+    radial-gradient(circle at 12% 8%,rgba(255,107,157,.24),transparent 28%),
+    radial-gradient(circle at 86% 10%,rgba(255,157,92,.18),transparent 24%),
+    radial-gradient(circle at 52% 88%,rgba(138,108,255,.22),transparent 34%),
+    linear-gradient(145deg,#060713 0%,#101126 48%,#201024 100%);
+  min-height:100vh;
+  padding-bottom:var(--safe-bottom);
+  overflow-x:hidden;
+}
+body.no-scroll{overflow:hidden}
+a{text-decoration:none;color:inherit}
+button,input{font-family:inherit}
+button{min-height:44px}
+.bg-tech{position:fixed;inset:0;z-index:-3;overflow:hidden;background:linear-gradient(145deg,#070713,#101126 45%,#241126)}
+.bg-tech:before{content:"";position:absolute;inset:-20%;background:radial-gradient(circle at 16% 18%,rgba(255,107,157,.30),transparent 22%),radial-gradient(circle at 84% 14%,rgba(255,157,92,.20),transparent 24%),radial-gradient(circle at 50% 86%,rgba(138,108,255,.28),transparent 28%);filter:blur(28px);animation:ambientMove 16s ease-in-out infinite alternate}
+.bg-tech:after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.055) 1px,transparent 1px);background-size:46px 46px;mask-image:linear-gradient(to bottom,transparent,black 18%,black 70%,transparent);opacity:.7}
+.orb{position:fixed;width:280px;height:280px;border-radius:50%;filter:blur(18px);z-index:-2;pointer-events:none;animation:float 10s ease-in-out infinite alternate}.orb.one{left:-100px;top:130px;background:radial-gradient(circle,rgba(255,107,157,.28),transparent 70%)}.orb.two{right:-110px;bottom:80px;background:radial-gradient(circle,rgba(255,157,92,.23),transparent 70%);animation-delay:-4s}
+@keyframes ambientMove{from{transform:translate3d(-2%,-1%,0) scale(1)}to{transform:translate3d(2%,1.5%,0) scale(1.06)}}@keyframes float{from{transform:translateY(-16px) scale(.98)}to{transform:translateY(18px) scale(1.08)}}
+.progress-top{position:fixed;left:0;top:0;height:3px;width:0;background:linear-gradient(90deg,var(--pink),var(--orange),var(--purple));z-index:130;box-shadow:0 0 18px rgba(255,107,157,.55)}
+.app{width:100%;max-width:1160px;margin:0 auto;padding:14px 14px 38px}.topbar{position:sticky;top:10px;z-index:60;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 12px;border:1px solid rgba(255,255,255,.16);border-radius:999px;background:rgba(11,10,26,.68);backdrop-filter:blur(22px);box-shadow:0 16px 46px rgba(0,0,0,.24),inset 0 1px 0 rgba(255,255,255,.08)}
+.brand{display:flex;align-items:center;gap:9px;font-weight:950;white-space:nowrap;letter-spacing:.2px}.logo{width:36px;height:36px;border-radius:14px;display:grid;place-items:center;color:#fff;background:linear-gradient(135deg,var(--pink),var(--wine) 50%,var(--orange));box-shadow:0 0 24px rgba(255,107,157,.34)}.topbar button{border:0;border-radius:999px;padding:10px 14px;color:#fff;font-weight:900;background:linear-gradient(135deg,var(--pink),var(--wine));box-shadow:0 12px 28px rgba(255,107,157,.22);cursor:pointer;transition:.22s}.topbar button:active{transform:scale(.97)}
+.hero{margin-top:18px;display:grid;grid-template-columns:1.1fr .9fr;gap:18px;align-items:stretch}.hero-card{position:relative;min-height:530px;overflow:hidden;border-radius:34px;background:#151221;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.16);isolation:isolate}.hero-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(1.08) contrast(1.04) brightness(.88)}.hero-card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,6,15,.10),rgba(5,6,15,.46) 48%,rgba(5,6,15,.90))}.hero-glow{position:absolute;inset:auto -20% -35% -20%;height:58%;z-index:1;background:radial-gradient(ellipse at center,rgba(255,107,157,.42),transparent 62%);filter:blur(18px)}.hero-content{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:28px;color:#fff}.tagline{display:inline-flex;align-items:center;gap:7px;padding:7px 11px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(10px);font-size:12px;font-weight:900;letter-spacing:.4px}.tagline:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold);box-shadow:0 0 13px var(--gold)}h1{margin:16px 0 10px;font-size:clamp(40px,6vw,74px);line-height:.96;letter-spacing:-2.3px;background:linear-gradient(90deg,#fff,#ffe0ec 42%,#ffd08a);-webkit-background-clip:text;background-clip:text;color:transparent}.hero-content p{margin:0;color:rgba(255,255,255,.88);line-height:1.88;max-width:660px}.hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}.btn{border:0;border-radius:999px;padding:12px 16px;font-weight:900;cursor:pointer;transition:.22s ease}.btn:active{transform:scale(.97)}.btn-light{background:linear-gradient(135deg,#fff,#ffe8d0);color:#4b2634}.btn-glass{background:rgba(255,255,255,.13);color:#fff;border:1px solid rgba(255,255,255,.22);backdrop-filter:blur(10px)}
+.side-stack{display:grid;gap:14px}.panel,.side-card,.subscribe{border-radius:var(--radius);border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.09);box-shadow:var(--soft-shadow);backdrop-filter:blur(20px)}.panel{padding:22px}.panel h2{margin:0 0 10px;font-size:28px;line-height:1.25;color:#fff}.panel p{margin:0;color:var(--muted);line-height:1.82}.scan-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}.scan{position:relative;padding:13px 10px;border-radius:18px;background:rgba(255,255,255,.075);border:1px solid rgba(255,255,255,.12);overflow:hidden}.scan:after{content:"";position:absolute;left:-50%;top:0;width:50%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.28),transparent);animation:scan 3.6s ease-in-out infinite}.scan:nth-child(2):after{animation-delay:.8s}.scan:nth-child(3):after{animation-delay:1.4s}@keyframes scan{0%,55%{transform:translateX(0)}100%{transform:translateX(320%)}}.scan strong{display:block;font-size:21px;color:var(--gold)}.scan span{font-size:12px;color:var(--muted)}.side-card{display:grid;grid-template-columns:106px 1fr;gap:14px;padding:12px;align-items:center;cursor:pointer;transition:.22s ease}.side-card:hover{transform:translateY(-3px)}.side-card img{width:106px;height:106px;border-radius:20px;object-fit:cover;filter:saturate(1.05) brightness(.92)}.side-card b{display:block;line-height:1.45;margin-bottom:6px;color:#fff}.side-card span{color:var(--muted);font-size:13px;line-height:1.65}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:16px;margin:34px 0 16px}.section-head h2{margin:0;font-size:clamp(30px,4.5vw,48px);letter-spacing:-1.3px;color:#fff}.section-head p{margin:8px 0 0;color:var(--muted);line-height:1.72}.searchbox{display:flex;align-items:center;gap:8px;margin-top:14px;padding:9px 13px;border-radius:18px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.14);box-shadow:0 12px 28px rgba(0,0,0,.12);transition:.22s}.searchbox:focus-within{border-color:rgba(255,208,138,.48);box-shadow:0 0 0 4px rgba(255,208,138,.08),0 14px 30px rgba(0,0,0,.16)}.searchbox input{width:100%;border:0;outline:0;background:transparent;color:#fff;font-size:15px}.searchbox input::placeholder{color:rgba(255,255,255,.52)}.chips{display:flex;flex-wrap:wrap;gap:9px;justify-content:flex-end}.chip{border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.075);color:#e5d9e8;border-radius:999px;padding:9px 12px;font-weight:850;cursor:pointer;transition:.2s}.chip.active{color:#24151c;background:linear-gradient(135deg,#ffe0b8,var(--gold));border-color:transparent;box-shadow:0 10px 22px rgba(255,208,138,.20)}
+.featured-strip{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-bottom:18px}.featured{min-height:202px;border-radius:26px;overflow:hidden;position:relative;box-shadow:var(--soft-shadow);cursor:pointer;background:#151221;transition:.22s ease;border:1px solid rgba(255,255,255,.12)}.featured:hover{transform:translateY(-4px)}.featured img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(1.08) brightness(.9)}.featured:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05),rgba(6,7,16,.80))}.featured div{position:absolute;z-index:2;left:16px;right:16px;bottom:15px;color:#fff}.featured span{font-size:12px;font-weight:900;color:#ffd9a8}.featured b{display:block;margin-top:5px;line-height:1.38;font-size:17px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.article-card{border-radius:26px;overflow:hidden;background:rgba(255,255,255,.085);border:1px solid rgba(255,255,255,.14);box-shadow:var(--soft-shadow);cursor:pointer;transition:transform .18s ease,box-shadow .18s ease,background .18s ease;will-change:transform}.article-card:hover{box-shadow:0 28px 70px rgba(0,0,0,.28);background:rgba(255,255,255,.11)}.article-card.reveal{opacity:0;transform:translateY(18px)}.article-card.reveal.visible{opacity:1;transform:translateY(0);transition:opacity .45s ease,transform .45s ease}.cover{height:212px;position:relative;overflow:hidden;background:linear-gradient(135deg,#31152b,#101126)}.cover img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s ease;filter:saturate(1.06) brightness(.92)}.article-card:hover .cover img{transform:scale(1.045)}.cover:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.02),rgba(0,0,0,.46))}.tag{position:absolute;left:13px;bottom:13px;z-index:2;padding:7px 10px;border-radius:999px;color:#fff;background:rgba(0,0,0,.38);backdrop-filter:blur(8px);font-size:12px;font-weight:900}.resonance-score{position:absolute;right:13px;top:13px;z-index:2;padding:7px 10px;border-radius:999px;color:#261318;background:linear-gradient(135deg,#ffe0b8,var(--gold));backdrop-filter:blur(8px);font-size:12px;font-weight:900}.article-body{padding:18px 18px 20px}.article-body h3{margin:0;font-size:21px;line-height:1.42;letter-spacing:-.3px;color:#fff}.mood{color:#ffd08a;font-size:13px;font-weight:900;margin:10px 0 8px}.summary{margin:0;color:var(--muted);font-size:14px;line-height:1.82;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.meta{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:15px;padding-top:14px;border-top:1px solid rgba(255,255,255,.10);color:#b8aebb;font-size:13px}.read-more{color:#ffd08a;font-weight:900;white-space:nowrap}.mood-boxes{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:18px}.mood-box{padding:17px;border-radius:22px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.13);box-shadow:var(--soft-shadow)}.mood-box b{display:block;margin-bottom:8px;color:#fff}.mood-box p{margin:0;color:var(--muted);line-height:1.74;font-size:14px}.bottom-area{display:grid;grid-template-columns:.9fr 1.1fr;gap:16px;margin-top:26px}.subscribe{padding:24px}.subscribe h2,.rank h2{margin:0 0 10px;font-size:28px;color:#fff}.subscribe p,.rank p{margin:0;color:var(--muted);line-height:1.78}.email-box{margin-top:17px;display:flex;gap:9px;padding:7px;border-radius:999px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.13)}.email-box input{flex:1;min-width:0;border:0;outline:0;padding:10px 12px;background:transparent;color:#fff}.email-box input::placeholder{color:rgba(255,255,255,.48)}.email-box button{border:0;border-radius:999px;padding:10px 15px;color:#24151c;font-weight:900;background:linear-gradient(135deg,#ffe0b8,var(--gold));cursor:pointer}.rank{border-radius:var(--radius);padding:24px;background:linear-gradient(135deg,#171126,#2b1230 58%,#371b16);color:#fff;box-shadow:var(--shadow);overflow:hidden;position:relative;border:1px solid rgba(255,255,255,.12)}.rank:before{content:"";position:absolute;right:-80px;top:-80px;width:210px;height:210px;border-radius:50%;background:rgba(255,157,92,.16)}.rank p{color:rgba(255,255,255,.68)}.rank-list{display:grid;gap:10px;margin-top:16px;position:relative}.rank-item{display:grid;grid-template-columns:34px 1fr auto;gap:11px;align-items:center;padding:11px;border-radius:16px;background:rgba(255,255,255,.08);cursor:pointer;border:1px solid rgba(255,255,255,.08);transition:.2s}.rank-item:active{transform:scale(.99)}.rank-item b{width:34px;height:34px;display:grid;place-items:center;border-radius:12px;background:rgba(255,208,138,.16);color:#ffd08a}.rank-item span{font-weight:800;line-height:1.42}.rank-item small{color:rgba(255,255,255,.58);white-space:nowrap}
+.message-board{margin-top:28px;border-radius:var(--radius);border:1px solid rgba(255,255,255,.13);background:linear-gradient(135deg,rgba(255,255,255,.09),rgba(255,255,255,.035));box-shadow:var(--shadow);overflow:hidden;position:relative;padding:22px;backdrop-filter:blur(18px)}
+.message-board:before{content:"";position:absolute;inset:-1px;pointer-events:none;background:radial-gradient(circle at 12% 0%,rgba(255,107,157,.18),transparent 30%),radial-gradient(circle at 88% 16%,rgba(255,157,92,.16),transparent 28%),linear-gradient(135deg,rgba(255,255,255,.12),transparent 38%);opacity:.9}.message-board>*{position:relative;z-index:1}.message-head{display:flex;justify-content:space-between;gap:18px;align-items:flex-end;margin-bottom:16px}.message-head h2{margin:0;font-size:clamp(26px,4vw,40px);letter-spacing:-.8px}.message-head p{margin:8px 0 0;color:var(--muted);line-height:1.76;max-width:720px}.message-count{flex:0 0 auto;min-width:88px;text-align:center;padding:12px 14px;border-radius:20px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);box-shadow:var(--soft-shadow)}.message-count strong{display:block;font-size:24px;color:var(--gold);line-height:1}.message-count span{font-size:12px;color:var(--muted)}.message-layout{display:grid;grid-template-columns:.92fr 1.08fr;gap:16px;align-items:stretch}.message-input-card{border-radius:22px;padding:16px;background:rgba(12,11,29,.42);border:1px solid rgba(255,255,255,.12)}.message-input-card label{display:block;font-weight:900;margin-bottom:10px;color:#fff}.message-input-card textarea{width:100%;min-height:118px;resize:none;border:1px solid rgba(255,255,255,.12);outline:0;border-radius:18px;padding:14px 14px;background:rgba(255,255,255,.08);color:#fff;font-size:15px;line-height:1.7}.message-input-card textarea::placeholder{color:rgba(255,255,255,.46)}.message-actions{display:flex;gap:10px;align-items:center;margin-top:12px}.message-actions button{border:0;border-radius:999px;padding:11px 16px;font-weight:900;cursor:pointer}.message-send{color:#27151d;background:linear-gradient(135deg,#ffe3bd,var(--gold));box-shadow:0 12px 28px rgba(255,157,92,.18)}.message-random{color:#fff;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.12)!important}.message-hint{margin:11px 0 0;color:rgba(255,255,255,.58);font-size:13px;line-height:1.7}.floating-stage{position:relative;min-height:206px;overflow:hidden;border-radius:22px;background:linear-gradient(135deg,rgba(255,255,255,.07),rgba(255,255,255,.025));border:1px solid rgba(255,255,255,.10)}.floating-stage:before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.18) 1px,transparent 1px);background-size:26px 26px;opacity:.12}.float-bubble{position:absolute;left:100%;top:var(--top,50%);max-width:78%;padding:10px 14px;border-radius:999px;color:#fff;font-weight:850;font-size:14px;line-height:1.45;white-space:nowrap;box-shadow:0 16px 38px rgba(0,0,0,.24);border:1px solid rgba(255,255,255,.18);animation:floatMsg var(--speed,9s) linear forwards;backdrop-filter:blur(10px)}@keyframes floatMsg{from{transform:translateX(0) translateY(0);opacity:0}8%{opacity:1}92%{opacity:1}to{transform:translateX(calc(-100vw - 560px)) translateY(-8px);opacity:0}}.message-chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}.message-chip{padding:10px 13px;border-radius:999px;color:#fff;font-size:13px;font-weight:850;line-height:1.35;border:1px solid rgba(255,255,255,.16);box-shadow:0 12px 28px rgba(0,0,0,.16)}.color-0{background:linear-gradient(135deg,#ff6b9d,#8f2d56)}.color-1{background:linear-gradient(135deg,#ff9d5c,#7b3f28)}.color-2{background:linear-gradient(135deg,#8a6cff,#3c2b72)}.color-3{background:linear-gradient(135deg,#6de6ff,#2d5b78)}.color-4{background:linear-gradient(135deg,#ffd08a,#8f5b2d);color:#2b1620}.message-chip.color-4{color:#2b1620}.message-empty{margin:0;color:rgba(255,255,255,.58);line-height:1.8;padding:12px 0}
+.footer{margin-top:30px;padding-top:22px;border-top:1px solid rgba(255,255,255,.10);text-align:center;color:var(--muted);line-height:1.8}
+.tabbar{position:fixed;left:50%;bottom:12px;transform:translateX(-50%);width:min(430px,calc(100% - 24px));z-index:70;display:none;grid-template-columns:repeat(4,1fr);gap:6px;padding:8px;border-radius:24px;background:rgba(18,17,38,.76);border:1px solid rgba(255,255,255,.15);backdrop-filter:blur(22px);box-shadow:0 16px 44px rgba(0,0,0,.32)}.tabbar a{display:grid;place-items:center;gap:2px;min-height:42px;padding:8px 4px;border-radius:17px;color:#d2c7d4;font-size:12px;font-weight:850}.tabbar a.active{background:linear-gradient(135deg,var(--pink),var(--wine));color:#fff;box-shadow:0 10px 24px rgba(255,107,157,.20)}
+.modal{position:fixed;inset:0;z-index:100;display:none;place-items:center;padding:14px;background:rgba(6,7,18,.66);backdrop-filter:blur(14px)}.modal.show{display:grid}.reader{width:min(840px,100%);max-height:91vh;overflow:auto;border-radius:28px;background:var(--cream);box-shadow:0 34px 90px rgba(0,0,0,.42);border:1px solid rgba(255,255,255,.46);animation:pop .22s ease}.reader-progress{position:sticky;top:0;height:4px;background:linear-gradient(90deg,var(--pink),var(--orange),var(--purple));width:0;z-index:5}@keyframes pop{from{transform:translateY(12px) scale(.98);opacity:0}to{transform:translateY(0) scale(1);opacity:1}}.reader-head{position:sticky;top:4px;z-index:4;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:13px 15px;background:rgba(255,248,241,.90);backdrop-filter:blur(18px);border-bottom:1px solid rgba(0,0,0,.06)}.reader-head span{color:#7e3151;font-weight:900;font-size:14px}.close{width:42px;height:42px;border:0;border-radius:50%;background:rgba(143,45,86,.10);color:#7e3151;font-size:24px;cursor:pointer}.reader-cover{height:305px;position:relative;overflow:hidden}.reader-cover img{width:100%;height:100%;object-fit:cover;display:block}.reader-cover:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.02),rgba(0,0,0,.22))}.reader-content{padding:24px clamp(20px,5vw,54px) 42px}.reader-content h1{margin:0 0 11px;font-size:clamp(28px,5vw,44px);line-height:1.16;letter-spacing:-.8px;color:#241c1c;background:none;-webkit-background-clip:initial;background-clip:initial}.article-info{color:var(--muted-dark);margin-bottom:24px;font-size:14px}.reader-content p{color:#443833;font-size:17px;line-height:2.08;margin:18px 0}.reader-content h2{margin:34px 0 8px;color:#7e3151;font-size:23px}.reader-content blockquote{margin:26px 0;padding:17px 18px;border-left:5px solid var(--wine);background:rgba(143,45,86,.08);border-radius:16px;color:#7a4052;line-height:1.9;font-weight:800}.toast{position:fixed;left:50%;bottom:96px;transform:translateX(-50%) translateY(18px);opacity:0;pointer-events:none;z-index:120;padding:12px 15px;border-radius:999px;color:#fff;background:rgba(21,18,32,.94);font-weight:800;transition:.25s ease;box-shadow:0 16px 38px rgba(0,0,0,.26)}.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}.backtop{position:fixed;right:16px;bottom:92px;z-index:65;width:46px;height:46px;border:1px solid rgba(255,255,255,.16);border-radius:50%;background:rgba(18,17,38,.75);color:#fff;backdrop-filter:blur(18px);box-shadow:0 14px 34px rgba(0,0,0,.24);opacity:0;pointer-events:none;transform:translateY(12px);transition:.25s}.backtop.show{opacity:1;pointer-events:auto;transform:translateY(0)}
+@media (max-width:930px){.hero,.bottom-area{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,1fr)}.mood-boxes{grid-template-columns:repeat(2,1fr)}.featured-strip{grid-template-columns:1fr 1fr}.featured:first-child{grid-column:span 2}}
+@media (max-width:640px){body{padding-bottom:var(--safe-bottom)}.app{padding:10px 12px 28px}.topbar{top:8px;border-radius:21px}.topbar button{display:none}.hero{margin-top:14px;gap:12px}.hero-card{min-height:520px;border-radius:30px}.hero-content{padding:24px 20px}h1{font-size:44px;letter-spacing:-1.8px}.hero-content p{font-size:15px}.panel{padding:20px}.panel h2{font-size:25px}.scan-row{gap:8px}.scan{padding:12px 9px}.side-card{grid-template-columns:96px 1fr}.side-card img{width:96px;height:96px}.section-head{display:block;margin-top:30px}.chips{justify-content:flex-start;margin-top:12px;overflow-x:auto;flex-wrap:nowrap;padding-bottom:4px;scrollbar-width:none}.chips::-webkit-scrollbar,.featured-strip::-webkit-scrollbar{display:none}.chip{flex:0 0 auto}.featured-strip{display:flex;overflow-x:auto;gap:12px;padding-bottom:4px;scroll-snap-type:x mandatory}.featured{min-width:82%;min-height:214px;scroll-snap-align:start}.grid{grid-template-columns:1fr;gap:16px}.article-card{border-radius:24px}.cover{height:226px}.article-body{padding:18px}.article-body h3{font-size:21px;line-height:1.44}.summary{line-height:1.82}.mood-boxes{grid-template-columns:1fr}.email-box{flex-direction:column;border-radius:20px}.email-box button{padding:12px 15px}.rank-item{grid-template-columns:34px 1fr}.rank-item small{grid-column:2}.tabbar{display:grid}.reader{border-radius:24px;max-height:92vh}.reader-cover{height:242px}.reader-content{padding:22px 20px 38px}.reader-content p{font-size:16px;line-height:2.02}.backtop{bottom:94px;right:14px}}
+
+.image-fallback::before{content:'情绪封面';position:absolute;inset:0;display:grid;place-items:center;color:rgba(255,255,255,.85);font-weight:900;letter-spacing:.12em;background:radial-gradient(circle at 25% 20%,rgba(255,157,92,.35),transparent 30%),linear-gradient(135deg,#201024,#8f2d56 48%,#ff9d5c)}
+
+.wechat-follow .email-box input{cursor:default;color:var(--cream);font-weight:900;letter-spacing:.06em}
+.wechat-follow .email-box button{white-space:nowrap}
+.wechat-note{margin:14px 0 0!important;color:rgba(255,255,255,.62)!important;font-size:13px;line-height:1.7!important}
+@media(max-width:640px){.wechat-follow .email-box{gap:8px}.wechat-follow .email-box button{padding-left:12px;padding-right:12px}}
+
+@media (max-width:930px){.message-layout{grid-template-columns:1fr}.message-head{align-items:flex-start}.floating-stage{min-height:190px}}
+@media (max-width:640px){.message-board{padding:16px;border-radius:24px;margin-top:24px}.message-head{display:block}.message-count{display:inline-block;margin-top:12px}.message-head h2{font-size:28px;line-height:1.22}.message-actions{display:grid;grid-template-columns:1fr 1fr}.message-actions button{padding:11px 10px}.floating-stage{min-height:170px}.float-bubble{max-width:88%;font-size:13px}.message-chip{font-size:12px}}
+</style></head><body>
+<div class="progress-top" id="pageProgress"></div>
+<div class="bg-tech"></div><div class="orb one"></div><div class="orb two"></div>
+<main class="app">
+  <nav class="topbar">
+    <a class="brand" href="#top"><span class="logo">醒</span><span>春风不语人</span></a>
+    <button onclick="scrollToArticles()">开始夜读</button>
+  </nav>
+  <section class="hero" id="top">
+    <div class="hero-card">
+      <img src="assets/article-1.png" alt="春风不语人主视觉" onerror="imgFallback(this)" />
+      <div class="hero-glow"></div>
+      <div class="hero-content">
+        <span class="tagline">深夜情绪馆 · 电影感夜读</span>
+        <h1>把说不出口的话，<br />写进深夜里。</h1>
+        <p>这里收藏每一个深夜不敢说出口的瞬间。情感文章 / 成长感悟 / 深夜电台 / 公众号爆款内容，适合在夜里慢慢读完。</p>
+        <div class="hero-actions">
+          <button class="btn btn-light" onclick="openArticle(0)">今晚主推</button>
+          <button class="btn btn-glass" onclick="scrollToArticles()">进入情绪文章馆</button>
+        </div>
+      </div>
+    </div>
+    <div class="side-stack">
+      <div class="panel">
+        <span class="tagline">Tonight Radio</span>
+        <h2>今晚，读一篇关于遗憾的故事。</h2>
+        <p>把说不出口的话，写进深夜里。搜索、分类、横滑推荐和阅读进度都保留，只让手机阅读更舒服。</p>
+        <div class="scan-row">
+          <div class="scan"><strong>10</strong><span>篇公众号文章</span></div>
+          <div class="scan"><strong>夜读</strong><span>情绪筛选</span></div>
+          <div class="scan"><strong>沉浸</strong><span>阅读体验</span></div>
+        </div>
+      </div>
+      <div class="side-card" onclick="openArticle(6)"><img src="assets/article-7.png" alt="偏爱文章" onerror="imgFallback(this)"><div><b>原来真正的偏爱，是你对别人都很好，却只对我不一样</b><span>最适合做公众号主推的情绪爆款标题。</span></div></div>
+      <div class="side-card" onclick="openArticle(9)"><img src="assets/article-1.png" alt="成长告别文章" onerror="imgFallback(this)"><div><b>后来我才明白：有些人是来教我长大的，不是来陪我到最后的</b><span>深夜场景感强，适合收藏转发。</span></div></div>
+    </div>
+  </section>
+  <section id="articles">
+    <div class="section-head">
+      <div>
+        <span class="tagline">Emotion Gallery</span>
+        <h2>情绪文章馆</h2>
+        <p>输入关键词或选择情绪标签，像刷信息流一样找到今晚适合自己的文章。</p>
+        <div class="searchbox"><span>⌕</span><input id="searchInput" placeholder="搜索偏爱、遗憾、嗜好、达尔文、成长…" /></div>
+      </div>
+      <div class="chips" id="chips"></div>
+    </div>
+    <div class="featured-strip" id="featuredStrip"></div>
+    <div class="grid" id="articleGrid"></div>
+  </section>
+  <section id="quotes">
+    <div class="section-head"><div><h2>夜读金句</h2><p>适合做文章分割、朋友圈文案、公众号封面副标题。</p></div></div>
+    <div class="mood-boxes">
+      <div class="mood-box"><b>关于爱</b><p>被坚定选择，永远比被热烈喜欢更让人安心。</p></div>
+      <div class="mood-box"><b>关于失去</b><p>有些离开不是失去，而是生活替你筛掉了不适合的人。</p></div>
+      <div class="mood-box"><b>关于成熟</b><p>成熟不是不需要爱，而是即使在爱里，也始终站在自己这边。</p></div>
+      <div class="mood-box"><b>关于释怀</b><p>真正放下，不是删除过去，而是提起时心里不再下雨。</p></div>
+    </div>
+  </section>
+  <section id="messages" class="message-board reveal">
+    <div class="message-head">
+      <div>
+        <span class="tagline">深夜留言版</span>
+        <h2>把今晚没说出口的话，留在这里</h2>
+        <p>有些心事不一定要有人回答，只要被温柔放下，就已经轻了一点。写下一句话，让它在夜里慢慢飘过去。</p>
+      </div>
+      <div class="message-count"><strong id="messageCount">0</strong><span>条心事</span></div>
+    </div>
+    <div class="message-layout">
+      <div class="message-input-card">
+        <label for="messageInput">今晚想留下哪一句？</label>
+        <textarea id="messageInput" maxlength="60" placeholder="比如：有些人，后来真的只适合留在歌里。"></textarea>
+        <div class="message-actions">
+          <button class="message-send" onclick="submitNightMessage()">让它飘起来</button>
+          <button class="message-random" onclick="fillNightMessage()">换一句心事</button>
+        </div>
+        <p class="message-hint">这些话只会安静留在你的这一晚，不打扰任何人。</p>
+      </div>
+      <div>
+        <div class="floating-stage" id="floatingStage" aria-label="飘动留言区"></div>
+        <div class="message-chips" id="messageChips"></div>
+      </div>
+    </div>
+  </section>
+  <section class="bottom-area" id="hot">
+    <div class="subscribe wechat-follow" id="follow"><span class="tagline">公众号 · 春风不语人</span><h2>关注公众号——春风不语人</h2><p>这里是栏目《每晚一首歌，聊点成年人不说的话》。每晚用一首歌，写一段不敢说出口的心事，也陪你把那些遗憾、偏爱和成长慢慢放进文字里。</p><div class="email-box"><input id="emailInput" value="春风不语人" readonly aria-label="公众号名称" /><button onclick="copyWechat()">复制公众号名</button></div><p class="wechat-note">在公众号后台搜索「春风不语人」，今晚就从一首歌和一段故事开始。</p></div>
+    <div class="rank"><h2>本周热读榜</h2><p>热门情绪文章，按照共鸣感与标题吸引力排序。</p><div class="rank-list" id="rankList"></div></div>
+  </section>
+  <footer class="footer"><p>© 2026 春风不语人 · 深夜情绪博客手机版</p><p>栏目《每晚一首歌，聊点成年人不说的话》</p><p>愿你有认真去爱的勇气，也有把自己接回来的底气。</p></footer>
+</main>
+<div class="tabbar"><a class="active" href="#top">首页</a><a href="#articles">文章</a><a href="#quotes">金句</a><a href="#hot">热读</a></div>
+<div class="modal" id="modal"><article class="reader"><div class="reader-progress" id="readerProgress"></div><div class="reader-head"><span id="readerTag">情感夜读</span><button class="close" onclick="closeArticle()">×</button></div><div id="readerInner"></div></article></div>
+<div class="toast" id="toast">今晚的来信，已经替你收好了。</div>
+<button class="backtop" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="返回顶部">↑</button>
+
+<script>
+const articles = [{"title":"“求你别离开我”这句话，他到最后都没敢说","tag":"遗憾故事","time":"6 分钟阅读","heat":"13.6w","mood":"克制 / 遗憾 / 没说出口","summary":"有些人不是不爱了，只是到最后连挽留都说得很轻。他把所有不舍藏进沉默里，把一句求你别走，硬生生咽回了心里。","image":"assets/article-1.png","score":99,"content":"<p>他后来才明白，感情里最痛的，不一定是争吵，也不一定是分开，而是你明明知道她要走了，却连一句“求你别离开我”都说不出口。</p>\n<p>那天晚上，她拖着行李站在门口，屋子里很安静。她没有哭，也没有闹，只是很平静地说：“我真的累了。”</p>\n<h2>01 最疼的告别，往往不是大吵大闹</h2>\n<p>他想解释，想挽回，想把这些年所有没说出口的在乎都讲给她听。可话到嘴边，却只剩下一句：“路上注意安全。”</p>\n<p>很多男人的遗憾，就是太晚才懂：沉默不代表成熟，克制也不等于深情。有些话你不说，对方真的会以为你不在乎。</p>\n<p>“求你别离开我”这句话，他到最后都没敢说。不是不爱，是太怕自己一开口，就输得彻底。</p>\n<h2>02 不是每个离开的人，都会等你学会表达</h2>\n<p>她曾经给过他很多机会。吵架后等他低头，失望后等他解释，难过时等他抱抱自己。可等久了，一个人也会慢慢冷掉。</p>\n<p>后来他终于懂了，爱不是只放在心里就够了。爱要回应，要表达，要在对方快撑不住的时候，让她知道自己不是一个人。</p>\n<h2>03 有些遗憾，是沉默亲手造成的</h2>\n<p>分开以后，他很多次想起那个门口。想起她最后回头的眼神，想起自己明明那么不舍，却装得那么平静。</p>\n<p>成年人的感情里，最怕的不是不爱，而是明明爱着，却把真心藏成了遗憾。</p>"},{"title":"那年夏天，我把《嗜好》唱给她听，却没敢说喜欢她","tag":"青春暗恋","time":"6 分钟阅读","heat":"12.9w","mood":"夏天 / 暗恋 / 没说出口","summary":"有些青春像一首歌，旋律很热烈，结尾却很安静。那年夏天，他把《嗜好》唱给她听，却始终没敢把喜欢说出口。","image":"assets/article-2.png","score":97,"content":"<p>那年夏天，他最常听的一首歌，是《嗜好》。耳机里反复播放的旋律，像极了他那场没有开口的暗恋，热烈、隐秘，又带着一点没资格靠近的胆怯。</p>\n<p>她坐在教室靠窗的位置，阳光落在她的课本上，也落在他偷偷看向她的每一个瞬间。他总说自己只是顺路，其实每一次经过，都是故意。</p>\n<h2>01 暗恋最像一场只有自己知道的盛夏</h2>\n<p>他会记得她喜欢喝的饮料，记得她喜欢的歌，记得她不经意说过的每一句小事。可他不敢说喜欢，因为怕一说出口，连朋友都做不成。</p>\n<p>毕业那天，大家去唱歌。他点了《嗜好》，把所有情绪都藏在歌词里。他唱得很认真，她也听得很认真，可他们谁都没有把那层窗户纸捅破。</p>\n<p>有些喜欢，藏在一首歌里；有些告白，输给了年少时的胆怯。</p>\n<h2>02 他不是没机会，只是一直在等更好的时机</h2>\n<p>很多年后他才知道，所谓“再等等”，很多时候等来的不是更好的时机，而是彻底错过。她后来去了别的城市，有了新的生活，也有了新的故事。</p>\n<p>他偶尔还是会听那首歌。前奏一响，眼前还是那个夏天，那个靠窗的女生，和那个明明喜欢却装作普通朋友的自己。</p>\n<h2>03 青春里的遗憾，后来都成了温柔的回声</h2>\n<p>有些人不会陪你走到最后，却会永远留在某个季节里。</p>\n<p>后来他终于明白，青春最动人的地方，不是一定要有结果，而是那个时候的喜欢，真的很真，很轻，也很勇敢。</p>"},{"title":"明明就还爱，为啥最后还是散了","tag":"爱而不得","time":"6 分钟阅读","heat":"12.4w","mood":"还爱 / 拉扯 / 分开","summary":"很多关系不是不爱才结束，而是两个人都还爱，却再也不知道怎么好好相处。","image":"assets/article-3.png","score":95,"content":"<p>最让人想不通的分开，不是“不爱了”，而是明明还爱，却还是散了。你们不是没有感情，也不是没有回忆，只是走到最后，爱已经撑不起那些反复发生的问题。</p>\n<p>你们还会想念，还会心软，还会在深夜翻到旧照片时突然沉默。可一想到重新开始，又觉得好像还是会重蹈覆辙。</p>\n<h2>01 不是不爱，是不会再好好相处了</h2>\n<p>很多感情败给的不是第三个人，而是一次次没被解决的小问题。你要的是回应，他给的是沉默；他要的是理解，你给的是情绪。</p>\n<p>爱还在，但安全感已经被消耗了。心动还在，但信任已经裂了缝。到最后，分开不是因为不爱，而是因为继续在一起，彼此都太累。</p>\n<p>明明就还爱，最后却还是散了。因为爱不是全部，能不能好好相处，才决定能不能走下去。</p>\n<h2>02 很多关系，是在反复失望里慢慢散的</h2>\n<p>真正让人离开的，从来不是某一次争吵，而是争吵之后没有改变；不是某一句狠话，而是狠话之后仍然没人愿意靠近。</p>\n<p>一次次期待落空，一次次主动变成疲惫，最后你会发现，一个人的心不是突然冷掉的，是在很多个没有回应的瞬间慢慢冷掉的。</p>\n<h2>03 还爱不代表一定要回头</h2>\n<p>有些人你还爱，但已经不适合继续。你们曾经认真过，也努力过，可不是所有努力都有结果。</p>\n<p>成年人的清醒，是承认爱过，也承认不合适。愿你以后遇见的人，不只让你心动，也能和你一起把日子过稳。</p>"},{"title":"先说谎的人，后来连真心都像假的","tag":"信任崩塌","time":"6 分钟阅读","heat":"11.8w","mood":"谎言 / 信任 / 心冷","summary":"感情里最可怕的不是一次欺骗，而是从那以后，他再认真说的话，你都不敢完全相信了。","image":"assets/article-4.png","score":93,"content":"<p>一段关系最难修复的，从来不是争吵，而是谎言。因为吵架之后可以和好，可一旦信任塌了，对方再说真话，你也会忍不住怀疑。</p>\n<p>她不是没有给过机会。她也想相信他，也想把那件事翻篇，可每次他晚回消息、每次他说自己很忙、每次解释得太顺，她心里都会突然一紧。</p>\n<h2>01 先说谎的人，输掉的是被相信的资格</h2>\n<p>谎言最伤人的地方，不只是它本身，而是它会让后来所有的真心都变得可疑。你说爱，她会想，这次是真的吗？你说没有，她会想，是不是又在骗我？</p>\n<p>信任不是一句“我错了”就能立刻恢复的。它需要时间，需要行动，更需要那个犯错的人愿意承担后果。</p>\n<p>先说谎的人，后来连真心都像假的。不是对方太敏感，是你亲手让她学会了怀疑。</p>\n<h2>02 被欺骗之后的人，不是变冷了，是变怕了</h2>\n<p>她不再像以前那样毫无保留，不是因为不爱了，而是因为怕再一次把真心交出去，又被轻轻摔在地上。</p>\n<p>很多人总怪对方翻旧账，却忘了旧账之所以还在那里，是因为伤口从来没有被认真处理过。</p>\n<h2>03 真正的道歉，是让对方重新安心</h2>\n<p>如果你真的想修复一段关系，就别只说“我以后不会了”。你要用稳定、坦诚和持续的行动，让对方慢慢看见改变。</p>\n<p>而如果你是那个被伤过的人，也请记得：不是每段破掉的信任都必须修好。</p>"},{"title":"悬溺一响，他把真心说出口，她却轻轻放下了","tag":"错过与放下","time":"6 分钟阅读","heat":"11.2w","mood":"悬溺 / 真心 / 放下","summary":"有些真心来得太晚，晚到对方已经不想再等了。那一刻他终于说出口，她却只是笑了笑。","image":"assets/article-5.png","score":91,"content":"<p>《悬溺》响起来的时候，他终于把那句藏了很久的话说出口了。可她没有像他想象中那样哭，也没有扑进他怀里，只是很轻地笑了一下。</p>\n<p>她说：“如果是以前听到这句话，我一定会很开心。”</p>\n<h2>01 真心不是没有用，是太晚了就会失效</h2>\n<p>他以为只要自己终于表达，就还能把她留住。可他忘了，她不是突然放下的。她是在很多次期待落空里，一点一点学会不等的。</p>\n<p>曾经她也想听他说爱，想听他说在乎，想听他说别走。可那个时候，他总是沉默，总是逃避，总是把真心藏得很深。</p>\n<p>有些真心不是假的，只是来得太晚。晚到对方已经把你从未来里慢慢删掉了。</p>\n<h2>02 她不是不感动了，是不想再回去了</h2>\n<p>放下一个人最安静的表现，不是拉黑，不是大哭，而是你终于听见他迟来的深情时，心里没有那么疼了。</p>\n<p>她当然记得那些快乐，也记得自己曾经有多喜欢他。可是记得不代表还要回头，怀念也不代表还能重新开始。</p>\n<h2>03 别等一个人走远了，才想起来表达</h2>\n<p>很多遗憾都不是不爱造成的，而是爱得太不及时。</p>\n<p>愿你以后爱一个人时，不要总把真心留到最后。该说的话早点说，该抱的人早点抱。</p>"},{"title":"真正有吸引力的必杀技，都赢在这两个字","tag":"真诚吸引","time":"6 分钟阅读","heat":"10.7w","mood":"真诚 / 吸引 / 长久","summary":"真正让人着迷的，从来不是套路和技巧，而是你身上那种稳定、干净、不表演的真诚。","image":"assets/article-6.png","score":89,"content":"<p>年轻的时候，我们总以为吸引一个人要靠技巧。要会聊天，要会制造氛围，要懂得忽冷忽热，要学会一点点拿捏。</p>\n<p>后来才发现，真正能留住人的，从来不是套路，而是两个字：真诚。</p>\n<h2>01 套路能让人靠近，真诚才能让人安心</h2>\n<p>套路确实可能让一段关系开始得很快，可它很难让一个人长期安心。因为表演久了会累，伪装久了会破，只有真实的东西，才经得起时间。</p>\n<p>真正有吸引力的人，不一定最会说话，但他说的话让人放心；不一定最会制造浪漫，但他做事稳定，不让人总是猜。</p>\n<blockquote>真正有吸引力的必杀技，不是忽冷忽热，不是欲擒故纵，而是真诚。</blockquote>\n<h2>02 真诚不是笨，是高级的稳定感</h2>\n<p>有些人把真诚当成不会玩，其实恰恰相反。越成熟的人，越知道真诚有多稀缺。</p>\n<p>真诚不是毫无保留地付出，也不是卑微讨好，而是你表达清楚自己的喜欢，也尊重对方的选择。</p>\n<h2>03 最长久的吸引，是让人不必防备</h2>\n<p>一个真正真诚的人，会让你慢慢放下防备。你不用猜他哪句话是真，哪句话是假；不用担心自己一认真，就成了输家。</p>\n<p>愿你以后不要为了显得高级而变得冷漠。真正高级的吸引力，是热烈但有分寸，真诚但有边界。</p>"},{"title":"原来真正的偏爱，是你对别人都很好，却只对我不一样","tag":"偏爱专属","time":"6 分钟阅读","heat":"10.4w","mood":"偏爱 / 专属 / 安全感","summary":"被平均分到的好，最让人没有安全感。真正的偏爱，是你知道他对世界温柔，却只把最特别的位置留给你。","image":"assets/article-7.png","score":87,"content":"<blockquote>真正让人心动的，不是一个人对所有人都好，而是他明明对世界温柔，却只给你一份不一样的特别。</blockquote>\n<p>他可以礼貌，可以体面，可以照顾所有人的感受。但你能清楚地感觉到，在他的世界里，你不是普通选项。</p>\n<h2>01 被平均分到的好，很难让人安心</h2>\n<p>如果一个人对你很好，也对别人一样好，你很难确定自己到底是不是特别的。你会开始比较，开始猜测，开始在一些细节里寻找答案。</p>\n<p>感情里最让人安心的，从来不是热闹的示好，而是稳定的偏向。是在很多选择出现时，他的答案总会悄悄靠近你。</p>\n<blockquote>真正的偏爱，是你对别人都很好，却只对我不一样。</blockquote>\n<h2>02 偏爱不是炫耀，是细节里的确定</h2>\n<p>他会记得你的喜好，会在你沉默时察觉异常，会在别人都没发现的时候，先问你一句“是不是不开心”。</p>\n<p>偏爱不一定要发很多朋友圈，也不一定要说很多甜话。偏爱是你不用争，也知道自己被放在心上。</p>\n<h2>03 别在没有偏爱的关系里证明自己</h2>\n<p>如果你总要靠懂事换关注，靠委屈换回应，靠比较确认位置，那段关系大概没有给你真正的安全感。</p>\n<p>愿你以后遇见的人，对世界温柔，也对你特别。愿你不是被平均分到的好，而是被坚定选择的那一个。</p>"},{"title":"爱情里最清醒的答案，藏在《达尔文》里","tag":"爱情进化","time":"6 分钟阅读","heat":"9.8w","mood":"达尔文 / 成长 / 筛选","summary":"爱情不是只靠心动就能走远。真正长久的关系，需要两个人一起进化、一起成长、一起成为更好的人。","image":"assets/article-8.png","score":85,"content":"<p>年轻时我们总以为，爱就是心动，就是非你不可。后来才懂，真正长久的关系，不只是相爱，还要一起成长。</p>\n<p>《达尔文》里最清醒的地方，不是把爱情讲得多残酷，而是提醒我们：感情也会筛选，关系也需要进化。</p>\n<h2>01 爱情也需要进化</h2>\n<p>两个人刚开始靠新鲜感靠近，但走到后来，靠的是理解、沟通、承担和一起面对生活的能力。只靠心动的关系，很容易在现实里失重。</p>\n<p>如果一个人一直原地踏步，另一个人一直努力成长，两个人的节奏迟早会越来越远。爱情不是要求你变成谁，而是让你愿意成为更好的自己。</p>\n<blockquote>真正适合你的人，不是让你停在原地的人，而是愿意和你一起变好的人。</blockquote>\n<h2>02 筛选不是冷漠，是清醒</h2>\n<p>有些人出现，是为了让你知道自己想要什么；有些人离开，是为了让你看清自己不能再忍受什么。爱情会筛选，生活也会筛选。</p>\n<p>你越成长，越不会只被热烈打动。你会开始看一个人能不能沟通，能不能承担，能不能在问题面前和你站在一起。</p>\n<h2>03 成为更好的人，才能遇见更好的爱</h2>\n<p>爱情不是让你变得卑微，而是让你看见自己还有哪些地方需要成熟。好的感情，会让两个人都往更好的方向走。</p>\n<p>愿你在爱里保持心动，也保持清醒；愿你遇见的人，既能陪你浪漫，也能陪你进化。</p>"},{"title":"我以为我们有以后，原来只是我一个人在计划","tag":"一个人的计划","time":"5 分钟阅读","heat":"9.3w","mood":"失落 / 期待 / 落空","summary":"最难过的不是没有以后，而是你已经把他写进未来，他却从来没有把你放进计划里。","image":"assets/article-9.png","score":83,"content":"<p>她曾经很认真地想过他们的以后。想过一起租一个有落地窗的小房子，想过周末去超市买菜，想过吵架后也要好好和好。</p>\n<p>可后来她才发现，所谓的以后，好像一直都是她一个人在计划。他从来没有认真接住过那些未来，也从来没有给过她确定的答案。</p>\n<h2>01 一个人的计划，撑不起两个人的未来</h2>\n<p>她说以后想去哪里，他总说“再看吧”；她问什么时候见家人，他说“不急”；她期待的每一个确定，都被他轻轻带过。</p>\n<p>最让人失望的，不是对方现在给不了你想要的生活，而是他从来没有想过，要和你一起走向未来。</p>\n<p>我以为我们有以后，原来只是我一个人在计划。</p>\n<h2>02 真正爱你的人，会给你位置</h2>\n<p>不是每个人都擅长表达未来，但一个真正在乎你的人，会让你感觉到自己被安排进了他的生活，而不是永远站在门外等通知。</p>\n<p>他会和你讨论明天，也会考虑你的感受；他不一定立刻给你全部承诺，但不会让你一直活在悬着的关系里。</p>\n<h2>03 别把自己困在没有答案的未来里</h2>\n<p>如果一个人长期不愿意给你确定感，你要学会看清。不是你想太多，而是你真的需要一个答案。</p>\n<p>愿你以后遇见的人，不让你一个人规划两个人的未来。愿你的期待，被认真回应；你的以后，也有人愿意一起奔赴。</p>"},{"title":"后来我才明白：有些人是来教我长大的，不是来陪我到最后的","tag":"成长告别","time":"6 分钟阅读","heat":"8.9w","mood":"告别 / 成长 / 释怀","summary":"有些人来过你的生命，不是为了成为结局，而是为了让你学会爱、学会痛，也学会把自己重新接回来。","image":"assets/article-10.png","score":81,"content":"<p>很久以后我才明白，有些人来到你的生命里，不是为了陪你到最后，而是为了教你长大。</p>\n<p>他教会你什么是心动，也教会你什么是失望；他让你相信过爱，也让你在某个深夜里，第一次认真地问自己：我是不是也该好好爱自己了。</p>\n<h2>01 有些人不是结局，是课程</h2>\n<p>你们曾经真的好过。一起分享日常，一起幻想未来，一起在某些瞬间觉得这就是命中注定。可后来，命运没有把你们写到同一页的最后。</p>\n<p>你会不甘心，会反复问为什么，也会在很长一段时间里，把自己困在过去。但时间久了你会发现，他留下的不只有遗憾，还有成长。</p>\n<p>有些人是来教你长大的，不是来陪你到最后的。</p>\n<h2>02 失去会痛，但也会让人清醒</h2>\n<p>分开以后你会难过，会反复回想，会不甘心。可慢慢地你会发现，那段关系也让你看清了自己的边界、需求和底线。</p>\n<p>你开始知道，爱不能只靠一个人努力；关系不能只靠委屈维持；真正适合你的人，不会让你长期怀疑自己值不值得被爱。</p>\n<h2>03 不是所有故事，都要以陪伴到最后才算圆满</h2>\n<p>有些人陪你走过一段路，就已经完成了他的意义。他让你成为现在的你，也让你更懂得以后该怎样去爱。</p>\n<p>愿你感谢来过的人，也放过离开的人。愿你在下一段路里，带着成长后的自己，遇见更稳、更真、更适合的爱。</p>"}];
+const categories = ["全部", ...new Set(articles.map(a=>a.tag))];
+let activeCategory = "全部";
+let query = "";
+const chips=document.getElementById("chips"), grid=document.getElementById("articleGrid"), rankList=document.getElementById("rankList"), featuredStrip=document.getElementById("featuredStrip"), modal=document.getElementById("modal"), readerInner=document.getElementById("readerInner"), readerTag=document.getElementById("readerTag"), toast=document.getElementById("toast"), searchInput=document.getElementById("searchInput"), pageProgress=document.getElementById("pageProgress"), readerProgress=document.getElementById("readerProgress");
+function renderChips(){chips.innerHTML=categories.map(c=>`<button class="chip ${c===activeCategory?'active':''}" onclick="filterCategory('${c}')">${c}</button>`).join('')}
+function filtered(){return articles.filter(a=>(activeCategory==="全部"||a.tag===activeCategory)&&(!query||[a.title,a.tag,a.mood,a.summary].join('').includes(query)))}
+function renderFeatured(){featuredStrip.innerHTML=[0,6,9].map(i=>`<div class="featured" onclick="openArticle(${i})"><img src="${articles[i].image}" alt="${articles[i].title}" onerror="imgFallback(this)" /><div><span>${articles[i].tag} · 热度 ${articles[i].heat}</span><b>${articles[i].title}</b></div></div>`).join('')}
+function renderArticles(){const visible=filtered();grid.innerHTML=visible.map(a=>{const i=articles.indexOf(a);return `<article class="article-card reveal" onclick="openArticle(${i})"><div class="cover"><img src="${a.image}" alt="${a.title}" onerror="imgFallback(this)" /><span class="tag">${a.tag}</span><span class="resonance-score">共鸣 ${a.score}</span></div><div class="article-body"><h3>${a.title}</h3><div class="mood">${a.mood}</div><p class="summary">${a.summary}</p><div class="meta"><span>${a.time} · ${a.heat}</span><span class="read-more">阅读全文 →</span></div></div></article>`}).join('') || `<div class="panel"><h2>没有匹配到文章</h2><p>换个关键词试试，比如：偏爱、嗜好、达尔文、遗憾、成长。</p></div>`; setupReveal(); setupTilt();}
+function renderRank(){rankList.innerHTML=articles.slice(0,5).map((a,i)=>`<div class="rank-item" onclick="openArticle(${i})"><b>${i+1}</b><span>${a.title}</span><small>${a.heat}</small></div>`).join('')}
+function filterCategory(c){activeCategory=c;renderChips();renderArticles();}
+function openArticle(i){const a=articles[i];readerTag.textContent=`${a.tag} · ${a.time} · ${a.heat} 热度`;readerInner.innerHTML=`<div class="reader-cover"><img src="${a.image}" alt="${a.title}" onerror="imgFallback(this)" /></div><div class="reader-content"><h1>${a.title}</h1><div class="article-info">作者：阿醒 · ${a.mood} · ${a.time}</div>${a.content}</div>`;readerProgress.style.width='0';modal.classList.add('show');document.body.classList.add('no-scroll');const reader=document.querySelector('.reader');reader.scrollTop=0;reader.addEventListener('scroll',readerScroll,{passive:true});}
+function closeArticle(){modal.classList.remove('show');document.body.classList.remove('no-scroll');}
+function readerScroll(){const r=document.querySelector('.reader');const max=r.scrollHeight-r.clientHeight;readerProgress.style.width=(max?Math.min(100,r.scrollTop/max*100):0)+'%'}
+function pageScroll(){const max=document.documentElement.scrollHeight-window.innerHeight;pageProgress.style.width=(max?window.scrollY/max*100:0)+'%'}
+function scrollToArticles(){document.getElementById('articles').scrollIntoView({behavior:'smooth',block:'start'})}
+function copyWechat(){const name='春风不语人';if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(name).then(()=>showToast('公众号名已复制：春风不语人')).catch(()=>fallbackCopy(name));}else{fallbackCopy(name)}}
+function fallbackCopy(text){const ta=document.createElement('textarea');ta.value=text;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();try{document.execCommand('copy');showToast('公众号名已复制：春风不语人')}catch(e){showToast('请在微信搜索：春风不语人')}document.body.removeChild(ta)}
+function subscribe(){copyWechat()}
+function showToast(msg){toast.textContent=msg;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),2200)}
+function imgFallback(img){img.onerror=null;img.style.display='none';img.parentElement.style.background='linear-gradient(135deg,#251126,#8f2d56,#ff9d5c)';}
+function setupReveal(){const els=[...document.querySelectorAll('.reveal')];if(!('IntersectionObserver'in window)){els.forEach(e=>e.classList.add('visible'));return}const ob=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');ob.unobserve(e.target)}}),{threshold:.12});els.forEach(e=>ob.observe(e));}
+function setupTilt(){if(window.matchMedia('(hover:hover)').matches)document.querySelectorAll('.article-card').forEach(card=>{card.onmousemove=e=>{const r=card.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;card.style.transform=`perspective(900px) rotateX(${-y*4}deg) rotateY(${x*4}deg) translateY(-4px)`};card.onmouseleave=()=>card.style.transform='';})}
+searchInput.addEventListener('input',e=>{query=e.target.value.trim();renderArticles();});
+modal.addEventListener('click',e=>{if(e.target===modal)closeArticle()});
+window.addEventListener('keydown',e=>{if(e.key==='Escape')closeArticle()});
+window.addEventListener('scroll',pageScroll,{passive:true});
+function updateBackTop(){const btn=document.getElementById('backTop');if(btn)btn.classList.toggle('show',window.scrollY>520)}
+function updateTabs(){const links=[...document.querySelectorAll('.tabbar a')];const ids=['top','articles','quotes','hot'];let current='top';ids.forEach(id=>{const el=document.getElementById(id);if(el&&el.getBoundingClientRect().top<window.innerHeight*.38)current=id});links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+current));}
+window.addEventListener('scroll',()=>{updateBackTop();updateTabs()},{passive:true});
+
+const nightSeeds=["今晚也要好好睡觉。","有些人，后来真的只适合留在歌里。","我不是不想你了，只是不再打扰了。","愿你爱得认真，也退得体面。","那些没说出口的话，风会慢慢替你带走。","后来我才懂，遗憾也是人生的一部分。"];
+const msgColors=['color-0','color-1','color-2','color-3','color-4'];
+let nightMessages=[];
+try{nightMessages=JSON.parse(localStorage.getItem('nightEmotionMessages')||'[]')}catch(e){nightMessages=[]}
+function renderNightMessages(){const box=document.getElementById('messageChips'),count=document.getElementById('messageCount');if(!box||!count)return;const list=[...nightSeeds.slice(0,4),...nightMessages].slice(-12);count.textContent=list.length;box.innerHTML=list.length?list.map((m,i)=>`<span class="message-chip ${msgColors[i%msgColors.length]}">${m}</span>`).join(''):'<p class="message-empty">今晚还没有心事落下。</p>';}
+function launchFloatingMessage(text){const stage=document.getElementById('floatingStage');if(!stage)return;const el=document.createElement('div');const idx=Math.floor(Math.random()*msgColors.length);el.className='float-bubble '+msgColors[idx];el.textContent=text;el.style.setProperty('--top',(18+Math.random()*62)+'%');el.style.setProperty('--speed',(7+Math.random()*4)+'s');stage.appendChild(el);setTimeout(()=>el.remove(),12000)}
+function submitNightMessage(){const input=document.getElementById('messageInput');if(!input)return;const text=input.value.trim();if(!text){showToast('先写下一句今晚的心事');return}nightMessages.push(text.slice(0,60));nightMessages=nightMessages.slice(-20);localStorage.setItem('nightEmotionMessages',JSON.stringify(nightMessages));input.value='';renderNightMessages();launchFloatingMessage(text);showToast('这句话已经飘进夜里了')}
+function fillNightMessage(){const input=document.getElementById('messageInput');if(!input)return;input.value=nightSeeds[Math.floor(Math.random()*nightSeeds.length)];input.focus()}
+function startNightDrift(){const stage=document.getElementById('floatingStage');if(!stage)return;nightSeeds.slice(0,3).forEach((m,i)=>setTimeout(()=>launchFloatingMessage(m),500+i*900));setInterval(()=>{if(document.visibilityState==='visible'){const all=[...nightSeeds,...nightMessages];if(all.length)launchFloatingMessage(all[Math.floor(Math.random()*all.length)])}},6500)}
+renderChips();renderFeatured();renderArticles();renderRank();renderNightMessages();startNightDrift();pageScroll();updateBackTop();updateTabs();
+</script>
+
+<script>
+(function(){
+  const fallback = "linear-gradient(135deg,#201024,#8f2d56 48%,#ff9d5c)";
+  function handleImgError(img){
+    if (!img || img.dataset.fallbackDone) return;
+    img.dataset.fallbackDone = "1";
+    img.style.display = "none";
+    const box = img.closest('.cover,.reader-cover,.featured,.hero-card,.side-card');
+    if (box) {
+      box.style.background = fallback;
+      box.classList.add('image-fallback');
+    }
+  }
+  document.addEventListener('error', function(e){
+    if (e.target && e.target.tagName === 'IMG') handleImgError(e.target);
+  }, true);
+})();
+</script>
+
+
+<!-- deploy-stamp: 1778766059 -->
+</body></html>
